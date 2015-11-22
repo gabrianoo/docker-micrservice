@@ -18,7 +18,7 @@ docker build -t docker-microservice-custom docker-microservice
 # Releases: s3://S3_URL/repository/releases
 # if you will use AWS S3 Wagon add the -e variables otherwise ignore this
 docker run -d --name docker-microservice -e S3_URL=<S3_URL> -e S3_USERNAME=<S3_USERNAME> \
--e S3_PASSWORD=<S3_PASSWORD> docker-microservice-custom
+-e S3_PASSWORD=<S3_PASSWORD> -e ARTIFACT=<ARTIFACT_TO_RUN> docker-microservice-custom
 ```
 
 ## Versions
@@ -35,5 +35,5 @@ docker run -d --name docker-microservice -e S3_URL=<S3_URL> -e S3_USERNAME=<S3_U
 
 ```
 docker run -d --name microservice -e S3_URL=<S3_URL> -e S3_USERNAME=<S3_USERNAME> \
--e S3_PASSWORD=<S3_PASSWORD> otasys/microservice
+-e S3_PASSWORD=<S3_PASSWORD> -e ARTIFACT=<ARTIFACT_TO_RUN> otasys/microservice
 ```
